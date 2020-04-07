@@ -21,7 +21,7 @@ $query = "INSERT INTO users (`e-mail`, `password`) VALUES ('test@test.com', 'sdf
 $mysqli->query($query);   //query - самостоятельнная функция выполнения строки.
 echo $mysqli->host_info . "\n";
 
-
+echo "Hello";
 
 
 
