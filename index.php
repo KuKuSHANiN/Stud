@@ -23,6 +23,7 @@ echo $mysqli->host_info . "\n";
 
 echo "Hello";
 echo "firsat blod ";
+echo "eto ne tvoe ";
 
 
 //(SELECT DISTINCT `User`, `Host` FROM `mysql`.`user` ) UNION (SELECT DISTINCT `User`, `Host` FROM `mysql`.`db` ) UNION (SELECT DISTINCT `User`, `Host` FROM `mysql`.`tables_priv` ) UNION (SELECT DISTINCT `User`, `Host` FROM `mysql`.`columns_priv` ) UNION (SELECT DISTINCT `User`, `Host` FROM `mysql`.`procs_priv` ) ORDER BY `User` ASC, `Host` ASC;
