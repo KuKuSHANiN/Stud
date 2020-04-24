@@ -20,11 +20,11 @@ if (isset($data['do_signup']) ) {
     }
     if (empty($errors)) {
         //все ок
-        $dsky = R::dispense( 'users' );
-        $dsky->login =$data['login'];
-        $dsky->email =$data['email'];
-        $dsky->password =$data['password'];
-        $id = R::store( $dsky);
+        $user = R::dispense( 'users' );
+        $user->login =$data['login'];
+        $user->email =$data['email'];
+        $user->password =$data['password'];
+        $id = R::store( $user);
     }
     else
     {
