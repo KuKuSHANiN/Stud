@@ -20,10 +20,15 @@ if (isset($data['do_signup']) ) {
     }
     if (empty($errors)) {
         //все ок
+        $dsky = R::dispense( 'users' );
+        $dsky->login =$data['login'];
+        $dsky->email =$data['email'];
+        $dsky->password =$data['password'];
+        $id = R::store( $dsky);
     }
     else
     {
-        echo "Не верно";
+        echo '<div type =" color: red">'.array_shift($errors).'</div>';
     }
 }
 ?>
@@ -31,17 +36,17 @@ if (isset($data['do_signup']) ) {
 <form action="signup.php" method="POST">
     <p>
     <p><strong>Your login</strong></p>
-        <input type="text"  name="login">
+        <input type="text"  name="login" value="<?php echo $data['login'];?>">
     </p>
 
     <P>
     <p><strong>Your e-mail</strong></p>
-    <input type="email"  name="email">
+    <input type="email"  name="email" value="<?php echo $data['email'];?>">>
     </P>
 
     <p>
     <p><strong>Your password</strong></p>
-    <input type="password"  name="password">
+    <input type="password"  name="password" value="<?php echo $data['password'];?>">>
     </p>
 
     <p>
